@@ -1,13 +1,13 @@
-import { render , screen } from "@testing-library/react"
-import { Application } from "./Application"
+import '@testing-library/jest-dom';
+import { render, screen } from "@testing-library/react";
+
+import { Application } from './application';
 
 describe('application', () => {
     test('renders', () => {
-        render(<Application />)
-        const elment = screen.getByRole('textbox');
-
-        expect(elment).toBeInTheDocument()
-
+        render(<Application />);
+        const element = screen.getByRole('textbox'); 
+        expect(element).toBeInTheDocument();
     })
 
 })
