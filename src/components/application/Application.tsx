@@ -9,7 +9,7 @@ export const Application = () => {
         src='https://via.placeholder.com/150'
         alt='a person with a laptop'
       />
-      <div data-testid='custom-element'>Custom HTML element</div>
+      <div data-testid='custom-element'>Custom HTMLcsd element</div>
       <form>
         <div>
           <label htmlFor='name'>Name</label>
