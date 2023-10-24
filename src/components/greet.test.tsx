@@ -2,15 +2,22 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { Greet } from './greet';
 
-test('test greet components', () => {
-  render(<Greet />);
-  const textElement = screen.getByText('Hello');
-  expect(textElement).toBeInTheDocument();
+describe('greet', () => {
+  test('test components', () => {
+    render(<Greet />);
+    const textElement = screen.getByText('Hello greet');
+    expect(textElement).toBeInTheDocument();
+  });
+
+
 });
 
-test('Greet render whit name', () => {
-  render(<Greet name='maryam' />);
+describe('Nested', () => {
+    test('render whit name ', () => {
+      render(<Greet name='maryam' />);
 
-  const textElement = screen.getByText('Hello maryam');
-  expect(textElement).toBeInTheDocument();
+      const textElement = screen.getByText('Hello maryam');
+      expect(textElement).toBeInTheDocument();
+    });
 });
+
