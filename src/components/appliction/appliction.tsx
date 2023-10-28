@@ -17,7 +17,7 @@ export const Application = () => {
             type='text'
             id='name'
             placeholder='Fullname'
-            value='Vishwas'
+            value='hamed'
             onChange={() => {}}
           />
         </div>

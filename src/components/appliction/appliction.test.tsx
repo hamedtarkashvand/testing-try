@@ -28,7 +28,12 @@ describe('Appliction', () => {
     }); 
 
     expect(nameElement2).toBeInTheDocument();
-     
+    
+    const nameElementValue = screen.getByDisplayValue('hamed');
+    expect(nameElementValue).toBeInTheDocument()
+
+
+
     const ariaInput = screen.getByRole('textbox', {
         name: 'Bio',
       });
