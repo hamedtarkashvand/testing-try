@@ -15,6 +15,8 @@ describe('Appliction', () => {
     });
     expect(headingElement2).toBeInTheDocument();
 
+    const paragraphElement = screen.getByText('All fields are mandatory');
+     expect(paragraphElement).toBeInTheDocument();
 
     const nameElement = screen.getByRole('textbox', {
       name: 'Name',
@@ -24,13 +26,12 @@ describe('Appliction', () => {
     const nameElement2 = screen.getByLabelText('Name', {
       selector:'input'
     }); 
-    
+
     expect(nameElement2).toBeInTheDocument();
-      
+     
     const ariaInput = screen.getByRole('textbox', {
         name: 'Bio',
       });
-    
     expect(ariaInput).toBeInTheDocument();
 
     const jobLocationElement = screen.getByRole('combobox');
