@@ -16,8 +16,15 @@ describe('Appliction', () => {
     expect(headingElement2).toBeInTheDocument();
 
     const paragraphElement = screen.getByText('All fields are mandatory');
-     expect(paragraphElement).toBeInTheDocument();
+    expect(paragraphElement).toBeInTheDocument();
 
+    const imageElement = screen.getByAltText('a person with a laptop');
+    expect(imageElement).toBeInTheDocument();
+
+    const testid_element = screen.getByTestId('custom-element');
+    expect(testid_element).toBeInTheDocument();
+    
+    
     const nameElement = screen.getByRole('textbox', {
       name: 'Name',
     });
@@ -26,7 +33,6 @@ describe('Appliction', () => {
     const nameElement2 = screen.getByLabelText('Name', {
       selector:'input'
     }); 
-
     expect(nameElement2).toBeInTheDocument();
     
     const nameElementValue = screen.getByDisplayValue('hamed');
