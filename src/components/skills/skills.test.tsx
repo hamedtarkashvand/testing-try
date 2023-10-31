@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import { screen, render } from '@testing-library/react';
 
 import { Skills } from './skills';
@@ -30,7 +29,6 @@ describe('Skills', () => {
     render(<Skills skills={skills} />);
     const buttonElement = screen.queryByRole('button', {
       name: 'Start learning',
-
     })
     expect(buttonElement).not.toBeInTheDocument();
   });

@@ -10,6 +10,7 @@ const config: Config = {
     '\\.(gif|ttf|eot|svg|png|css)$':
       '<rootDir>/src/test/__ mocks __/fileMock.js',
   },
+  setupFilesAfterEnv: ['<rootDir>/config/setupTests.ts'],
   coverageThreshold: {
     global: {
       branches: 80,
