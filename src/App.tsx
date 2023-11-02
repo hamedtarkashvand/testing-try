@@ -1,9 +1,16 @@
-import { Skills } from './components/skills/skills'
-
+// import { Counter } from './components/counter/counter';
+import MuiTheme from './components/mui/muiTheme';
+import { AppProviders } from './providers/mui-mode';
+// import { Skills } from './components/skills/skills'
+import './App.css'
 function App() {
 
   return (
-    <Skills skills={['css' , 'html']}/>
+    <AppProviders>
+      <div className="app">
+      <MuiTheme />
+      </div>
+    </AppProviders>
   );
 }
 
