@@ -1,6 +1,8 @@
 import type { Config } from 'jest';
 
 const config: Config = {
+  // setupFilesAfterEnv: ['<rootDir>/src/config/setupTests.js'],
+
   preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
   transform: {
@@ -10,7 +12,6 @@ const config: Config = {
     '\\.(gif|ttf|eot|svg|png|css)$':
       '<rootDir>/src/test/__ mocks __/fileMock.js',
   },
-  setupFilesAfterEnv: ['<rootDir>/config/setupTests.ts'],
   coverageThreshold: {
     global: {
       branches: 80,
