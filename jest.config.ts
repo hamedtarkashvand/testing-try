@@ -1,12 +1,16 @@
 import type { Config } from 'jest';
 
 const config: Config = {
-  // setupFilesAfterEnv: ['<rootDir>/src/config/setupTests.js'],
-
+  setupFiles: ['./jest.polyfills.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/config/setupTests.ts'],
+  // setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
   preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
+  },
+   testEnvironmentOptions: {
+    customExportConditions: [''],
   },
   moduleNameMapper: {
     '\\.(gif|ttf|eot|svg|png|css)$':

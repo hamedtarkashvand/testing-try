@@ -1,9 +1,12 @@
-import { render , Screen } from "@testing-library/react";
+import { render , screen } from "@testing-library/react";
 import { Users } from "./users";
 
-describe('d', () => {
-    const data = ['css' , 'js' , 'html']
-    test('ds', () => {
-        render(<Users  />)
+describe('testing mock services', () => {
+   
+    test('sholde render listitems', async () => {
+        render(<Users />)
+        const elemntsUsers = await screen.findAllByRole('listitem');
+        screen.debug()
+        expect(elemntsUsers).toHaveLength(4)
     })
 })
